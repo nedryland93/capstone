@@ -24,7 +24,7 @@ export default function SectionHero() {
                         </div>
                         <h3 className="darksans">Dorothy</h3>
                     </div>
-                    <p className="darksans">Very taste!</p>
+                    <p className="darksans">Incredible!</p>
                     <p>⭐⭐⭐⭐</p>
                 </div>
 

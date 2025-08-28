@@ -2,7 +2,7 @@ import "./Footer.css";
 
 export default function Footer() {
     return (
-        <footer>
+        <footer id="contacts">
             <div>
                 <h3>Doormat Navigation</h3>
                 <ul>

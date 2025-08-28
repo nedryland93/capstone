@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './App.css';
 import Header from "./components/Header.js";
-import Main from "./components/Main.js";
+import RoutingPage from "./components/RoutingPage.js";
 import Footer from "./components/Footer.js";
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
     return (
         <div className='app'>
             <Header/>
-            <Main/>
+            <RoutingPage/>
             <Footer/>
         </div>
     );

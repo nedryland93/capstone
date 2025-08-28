@@ -1,11 +1,16 @@
 import Image from "../assets/lemon_dessert.jpg";
+import { Link } from "react-router-dom";
 
 export default function SectionHero() {
     return(
         <section className="mainbox specials">
             <div className="specials_header">
                 <h2 className="darksans">Specials</h2>
-                <button className="btn1">Online Menu</button>
+                <Link to="/bookingPage" className="link">
+                    <button className="btn1">
+                        Order a delvery
+                    </button>
+                </Link>
             </div>
             
             <div className="flex_container">
@@ -24,9 +29,11 @@ export default function SectionHero() {
                             cheese, garnished with crunchy garlic and 
                             rosemary croutons. 
                         </p>
-                        <button className="btn1">
-                            Order a delivery
-                        </button>
+                        <Link to="/bookingPage" className="link">
+                            <button className="btn1">
+                                Order a delvery
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -45,9 +52,11 @@ export default function SectionHero() {
                             cheese, garnished with crunchy garlic and 
                             rosemary croutons. 
                         </p>
-                        <button className="btn1">
-                            Order a delivery
-                        </button>
+                        <Link to="/bookingPage" className="link">
+                            <button className="btn1">
+                                Order a delvery
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -66,9 +75,11 @@ export default function SectionHero() {
                             cheese, garnished with crunchy garlic and 
                             rosemary croutons. 
                         </p>
-                        <button className="btn1">
-                            Order a delivery
-                        </button>
+                        <Link to="/bookingPage" className="link">
+                            <button className="btn1">
+                                Order a delvery
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

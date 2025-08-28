@@ -1,8 +1,9 @@
 import Image from "../assets/lemon_dessert.jpg";
+import { Link } from "react-router-dom";
 
 export default function SectionHero() {
     return(
-        <section className="mainbox hero">
+        <section className="mainbox hero" id="home">
             <div className="info">
                 <h1 className="yellowserif centred">Little lemon</h1>
                 <h2 className="whiteserif centred">Portland, Oregon</h2>
@@ -12,9 +13,11 @@ export default function SectionHero() {
                     recipes served with a modern twist.
                 </p>
                 <div className="centred">
-                    <button className="btn1">
-                        Reserve a table
-                    </button>
+                    <Link to="/bookingPage" className="link">
+                        <button className="btn1">
+                            Reserve a table
+                        </button>
+                    </Link>
                 </div>
                 
             </div>
