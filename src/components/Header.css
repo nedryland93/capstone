@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-bottom: 1px solid #888;
+    text-align: center;
+}
+header img {
+    height: 3rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+    font-family: "Karla", sans-serif;
+}
+nav a {
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}

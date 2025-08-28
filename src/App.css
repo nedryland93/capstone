@@ -4,28 +4,78 @@
     min-height: 100vh;
 }
 
-header {
-    padding: 1rem;
-    text-align: center;
+/* COLOR & FONTS STYLES */
+
+h1.yellowserif {
+    font-family: "Markazi text", serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #f4ce14;
+    margin: 0.3rem 0;
 }
-header img {
-    height: 4rem;
+h1.greenserif {
+    font-family: "Markazi text", serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #495e57;
+    margin: 0.3rem 0;
+}
+h2.whiteserif {
+    font-family: "Markazi text", serif;
+    font-size: 2.0rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0.5rem 0;
+}
+h2.darkserif {
+    font-family: "Markazi text", serif;
+    font-size: 2.0rem;
+    font-weight: 500;
+    color: #111;
+    margin: 0.5rem 0;
+}
+h2.darksans {
+    font-family: "Karla", sans-serif;
+    font-size: 1.6rem;
+}
+h3.darksans {
+    font-family: "Karla", sans-serif;
+    font-size: 1.1rem;
+}
+p.whitesans {
+    font-family: "Karla", sans-serif;
+    color: #fff;
+}
+p.darksans {
+    font-family: "Karla", sans-serif;
+}
+.price {
+    font-family: "Karla", sans-serif;
+    font-size: 1.1rem;
+    color: red;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
+/* END COLOR & FONTS STYLES */
+
+/* INPUT & BUTTON STYLES */
+
+.btn1 {
+    background-color: #f4ce14;
+    padding: 7px 22px;
+    border: none;
+    border-radius: 8px;
+    font-family: "Karla", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.btn1:hover {
+    outline: 2px solid #222;
+    cursor: pointer;
+}
+.btn1:active {
+    background-color: #495e57;
+    outline: 2px solid #f4ce14;
+    color: #fff;
 }
 
-main {
-    flex: 1;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    border-top: 1px solid #888;
-    margin-top: 2rem;
-}
+/* END INPUT & BUTTON STYLES */
