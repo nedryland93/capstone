@@ -1,0 +1,53 @@
+.field {
+    margin: 1rem;
+}
+
+.bookingForm{
+    flex: 1;
+}
+
+.submitField {
+    margin: 3rem 1rem 1rem 1rem;
+}
+
+.bookingHeader {
+    background-color: #495e57;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* ALERT */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2229;
+}
+
+.dialog {
+    width: 95%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 16px;
+    font-family: "Karla", sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.infopanel {
+    padding: 1rem;
+    border: 1px solid #888;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+span {
+    font-weight: bold;
+}

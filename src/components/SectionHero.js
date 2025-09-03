@@ -1,4 +1,4 @@
-import Image from "../assets/lemon_dessert.jpg";
+import Image from "../assets/dish.jpg";
 import { Link } from "react-router-dom";
 
 export default function SectionHero() {

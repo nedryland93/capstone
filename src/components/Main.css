@@ -1,4 +1,7 @@
-/* GENERALS */
+/* -------------------------------- */
+/* ----------- GENERALS ----------- */
+/* -------------------------------- */
+
 main {
     flex: 1;
 }
@@ -7,11 +10,13 @@ main {
     display: flex;
     justify-content: center;
     column-gap: 2rem;
-    row-gap: 1rem;
+    row-gap: 2rem;
     flex-wrap: wrap;
 }
 
-/* HERO SECTION */
+/* -------------------------------- */
+/* --------- HERO SECTION --------- */
+/* -------------------------------- */
 
 .hero {
     display: flex;
@@ -19,6 +24,7 @@ main {
     align-items: center;
     flex-wrap: wrap;
     column-gap: 2rem;
+    row-gap: 2rem;
     background-color: #495e57;
 }
 
@@ -35,7 +41,9 @@ main {
     object-fit: cover;
 }
 
-/* HIGHLIGHTS */
+/* -------------------------------- */
+/* ---- HIGHLIGHTS (SPECIALS) ----- */
+/* -------------------------------- */
 
 .specials_header {
     display: flex;
@@ -73,7 +81,10 @@ main {
     text-align: center;
 }
 
-/* RATINGS */
+/* -------------------------------- */
+/* ----------- RATINGS ------------ */
+/* -------------------------------- */
+
 .ratings {background-color: #edefee;}
 .rating_title {text-align: center;}
 .ratingbox {
@@ -83,7 +94,8 @@ main {
 }
 .rating_header {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
+    gap: 1rem;
     align-items: center;
     
 }
@@ -98,7 +110,10 @@ main {
     border-radius: 50%;
 }
 
-/* ABOUT */
+/* -------------------------------- */
+/* ------------ ABOUT ------------- */
+/* -------------------------------- */
+
 .about {
     display: flex;
     justify-content: center;
@@ -113,8 +128,12 @@ main {
     max-width: 300px;
 }
 
+/* -------------------------------- */
+/* ---------- PORTABILITY --------- */
+/* -------------------------------- */
+
 @media screen and (max-width: 600px) {
-    .hero{row-gap: 2rem;}
+    .info{text-align: center;}
     .centred{text-align: center;}
     .dishbox{width: 95%; max-width: 400px;}
 }

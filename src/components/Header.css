@@ -1,9 +1,16 @@
+/* ---------------------------------- */
+/* ---------- HEADER ONLY ----------- */
+/* ---------------------------------- */
+
 header {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 5rem;
     flex-wrap: wrap;
+    background-color: #fff;
     padding: 1rem;
     border-bottom: 1px solid #888;
     text-align: center;
@@ -12,16 +19,103 @@ header img {
     height: 3rem;
 }
 
-nav {
+/* ---------------------------------- */
+/* ----------- NAV BAR -------------- */
+/* ---------------------------------- */
+
+/* LARGE NAVBAR */
+.large_navbar {
     display: flex;
     justify-content: center;
     column-gap: 2rem;
     flex-wrap: wrap;
     font-family: "Karla", sans-serif;
 }
-nav a {
+.large_navbar a {
     text-decoration: none;
 }
-nav a:hover {
+.large_navbar a:hover {
     text-decoration: underline;
+}
+
+/* HAMBURGER MENU */
+
+.hamburger {
+    display: none;
+}
+.menulogo {
+    cursor: pointer;
+}
+.menulogo input {
+    display: none;
+}
+.bar {
+    width: 40px;
+    height: 5px;
+    background-color: #777;
+    border-radius: 4px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* ---------------------------------- */
+/* HAMBURGER MENU LOGO TRANSFORMATION */
+
+.menulogo input:checked ~ .bar:nth-child(2) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+.menulogo input:checked ~ .bar:nth-child(3) {
+    opacity: 0;
+}
+.menulogo input:checked ~ .bar:nth-child(4) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* END HAMBURGER MENU LOGO TRANSFORMATION */
+/* -------------------------------------- */
+
+.menubox {
+    position: fixed;
+    top: 100px;
+    right: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: -4px 4px 3px #2222;
+}
+.menubox p {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    margin: 0;
+}
+.menubox p:hover {
+    background-color: #eee;
+}
+.menubox p:active {
+    background-color: #f4ce14;
+}
+
+/* ---------------------------------- */
+/* ---------- PORTABILITY ----------- */
+/* ---------------------------------- */
+
+@media screen and (max-width: 800px) {
+    header {
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    .large_navbar {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    header img {
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    header img {
+        height: 2rem;
+    }
 }
