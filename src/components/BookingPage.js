@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import "./BookingPage.css";
+// import "../App.css";
 
 export default function BookingPage({
     availableTimes, 
     updateTimes,
-    todayDate, 
+    todayDate,
     updateDate, 
     submitForm,
-    confirmData
+    confirmData,
     }) {
+    
     useEffect(() => {
         document.title = "Little Lemon - Booking Page";
     }, []);
@@ -28,9 +30,9 @@ export default function BookingPage({
         setTime(e.target.value);
     }
 
-    const [guest, setGuest] = useState("1");
-    const handleGuestChange = (e) => {
-        setGuest(e.target.value);
+    const [guests, setGuests] = useState("1");
+    const handleGuestsChange = (e) => {
+        setGuests(e.target.value);
     }
 
     const [occasion, setOccasion] = useState("Normal");
@@ -45,7 +47,7 @@ export default function BookingPage({
         const formData = {
             date,
             time,
-            guest,
+            guests,
             occasion
         };
         confirmData(formData);
@@ -56,20 +58,22 @@ export default function BookingPage({
 
     return (
         <div className="bookingForm">
-            <div className="bookingHeader">
+            <div className="titlebox">
                 <h1 className="yellowserif">Reserve a table</h1>
             </div>
             <form onSubmit={manageSubmit}>
                 <div className="field">
-                    <label htmlFor="date">Choose date {todayDate}</label>
+                    <label htmlFor="date">Choose date</label>
                     <input 
                         type="date" 
                         id="date"
                         name="date"
                         required
                         value={date}
+                        min={todayDate}
                         onChange={handleDateChange}
                     />
+                    {date==="" && <p className="validationError" data-testid="date-error">❌</p>}
                 </div>
                 
                 <div className="field">
@@ -85,6 +89,8 @@ export default function BookingPage({
                             return <option key={item} value={item}>{item}</option>;
                         })}
                     </select>
+                    {/* while "date" is empty, "time" state still have prev.value */}
+                    {date==="" && <p className="validationError">❌</p>}
                 </div>
 
                 <div className="field">
@@ -93,11 +99,11 @@ export default function BookingPage({
                         type="number" 
                         id="guests"
                         name="guests"
-                        value={guest} 
+                        value={guests} 
                         min="1" 
                         max="10"
                         required
-                        onChange={handleGuestChange}
+                        onChange={handleGuestsChange}
                     />
                 </div>
 
@@ -119,9 +125,19 @@ export default function BookingPage({
                     <button 
                         className="btn1" 
                         type="submit"
+                        disabled={date==="" || time==="" ? true : false}
+                        aria-label="On Click"
                     >Make Your reservation</button>
                 </div>
             </form>
+            {
+                date!=="" ?
+                <p style={{fontStyle: "italic", textAlign: "center"}}>
+                    Note to reviewer: To test the form validation, 
+                    remove the date from the date field.
+                </p> :
+                <p style={{textAlign: "center"}}>😎</p>
+            }
         </div>
     );
 }

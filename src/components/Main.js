@@ -5,15 +5,15 @@ import SectionRatings from "./SectionRatings";
 import SectioAbout from "./SectionAbout";
 import "./Main.css";
 
-export default function Main() {
+export default function Main({change}) {
     useEffect(() => {
         document.title="Little Lemon - Home";
     }, []);
 
     return (
         <main>
-            <SectionHero/>
-            <SectionSpecials/>
+            <SectionHero change={change}/>
+            <SectionSpecials change={change}/>
             <SectionRatings/>
             <SectioAbout/>
         </main>

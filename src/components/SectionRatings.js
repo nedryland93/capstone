@@ -1,4 +1,6 @@
-import Profile from "../assets/profile.jpg";
+import Profile1 from "../assets/profile1.jpg";
+import Profile2 from "../assets/profile2.jpg";
+import Profile3 from "../assets/profile3.jpg";
 
 export default function SectionHero() {
     return(
@@ -9,7 +11,7 @@ export default function SectionHero() {
                 <div className="ratingbox">
                     <div className="rating_header">
                         <div className="profile">
-                            <img src={Profile} alt="Profile"/>
+                            <img src={Profile1} alt="Profile"/>
                         </div>
                         <h3 className="darksans">Emma</h3>
                     </div>
@@ -20,7 +22,7 @@ export default function SectionHero() {
                 <div className="ratingbox">
                     <div className="rating_header">
                         <div className="profile">
-                            <img src={Profile} alt="Profile"/>
+                            <img src={Profile2} alt="Profile"/>
                         </div>
                         <h3 className="darksans">Dorothy</h3>
                     </div>
@@ -31,7 +33,7 @@ export default function SectionHero() {
                 <div className="ratingbox">
                     <div className="rating_header">
                         <div className="profile">
-                            <img src={Profile} alt="Profile"/>
+                            <img src={Profile3} alt="Profile"/>
                         </div>
                         <h3 className="darksans">Emily</h3>
                     </div>

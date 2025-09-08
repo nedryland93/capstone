@@ -3,11 +3,11 @@ import Nav from "./Nav";
 import NavHamburger from "./NavHamburger";
 import "./Header.css";
 
-export default function Header() {
+export default function Header({status, change}) {
     return (
         <header>
             <img src={Logo} alt="logo"/>
-            <Nav/>
+            <Nav status={status} change={change} />
             <NavHamburger/>
         </header>
     );

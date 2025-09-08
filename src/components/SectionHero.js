@@ -1,7 +1,7 @@
 import Image from "../assets/dish.jpg";
 import { Link } from "react-router-dom";
 
-export default function SectionHero() {
+export default function SectionHero({change}) {
     return(
         <section className="mainbox hero" id="home">
             <div className="info">
@@ -13,8 +13,8 @@ export default function SectionHero() {
                     recipes served with a modern twist.
                 </p>
                 <div className="centred">
-                    <Link to="/bookingPage" className="link">
-                        <button className="btn1">
+                    <Link to="/bookingPage" className="link" onClick={() => change("Res")}>
+                        <button className="btn1" aria-label="On Click">
                             Reserve a table
                         </button>
                     </Link>

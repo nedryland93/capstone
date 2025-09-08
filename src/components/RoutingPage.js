@@ -6,7 +6,7 @@ import Delivery from "./Delivery";
 import ConfirmedBooking from "./ConfirmedBooking";
 import { fetchAPI, submitAPI } from "./api";
 
-export default function RoutingPage() {
+export default function RoutingPage({change}) {
     /* Booking time high level management (useState) */
     const today = new Date();
     const initializeTimes = fetchAPI(today);
@@ -49,7 +49,12 @@ export default function RoutingPage() {
 
     return (
         <Routes>
-            <Route path="/" element={<Main/>} />
+            <Route path="/" element={
+                <Main 
+                    change={change}
+                />} 
+            />
+
             <Route path="/bookingPage" element={
                 <BookingPage 
                     availableTimes={availableTimes}
@@ -60,8 +65,20 @@ export default function RoutingPage() {
                     confirmData={updateConfirmData}
                 />}
             />
-            <Route path="/delivery" element={<Delivery info={availableTimes}/>} />
-            <Route path="/confirmed" element={<ConfirmedBooking info={confirmData}/>} />
+
+            <Route path="/delivery" element={
+                <Delivery 
+                    info={availableTimes}
+                    change={change}
+                />} 
+            />
+
+            <Route path="/confirmed" element={
+                <ConfirmedBooking 
+                    info={confirmData}
+                    change={change}
+                />} 
+            />
         </Routes>
     );
 }
