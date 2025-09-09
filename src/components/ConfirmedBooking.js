@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import BookingAlert from "./BookingAlert";
 import "./ConfirmedBooking.css";
 
-export default function ConfirmedBooking ({info, change}) {
+export default function ConfirmedBooking ({info, change, updateTimes}) {
     /* Dialog control */
     const [dialog, setDialog] = useState(false);
     const toggleDialog = () => {
@@ -37,7 +37,10 @@ export default function ConfirmedBooking ({info, change}) {
 
                     <button 
                         className="btn1" 
-                        onClick={toggleDialog}
+                        onClick={() => {
+                            toggleDialog();
+                            updateTimes(info.time);
+                        }}
                         aria-label="On Click"
                     >
                         Confirm

@@ -6,6 +6,7 @@ export default function BookingPage({
     availableTimes, 
     updateTimes,
     todayDate,
+    selectedDate,
     updateDate, 
     submitForm,
     confirmData,
@@ -17,7 +18,7 @@ export default function BookingPage({
 
     /* Input control variables */
 
-    const [date, setDate] = useState(todayDate);
+    const [date, setDate] = useState(selectedDate);
     const handleDateChange = (e) => {
         const newDateStr = e.target.value;
         setDate(newDateStr);
@@ -53,7 +54,6 @@ export default function BookingPage({
         confirmData(formData);
         /* Calling function "formData" from the parent component */
         submitForm(formData);
-        updateTimes(time);
     };
 
     return (
@@ -126,7 +126,7 @@ export default function BookingPage({
                         className="btn1" 
                         type="submit"
                         disabled={date==="" || time==="" ? true : false}
-                        aria-label="On Click"
+                        // aria-label="On Click" // This property invalidates .getByRole
                     >Make Your reservation</button>
                 </div>
             </form>
@@ -136,7 +136,9 @@ export default function BookingPage({
                     Note to reviewer: To test the form validation, 
                     remove the date from the date field.
                 </p> :
-                <p style={{textAlign: "center"}}>😎</p>
+                <p style={{textAlign: "center", fontStyle: "italic"}}>
+                    The "submit" button should now be locked
+                </p>
             }
         </div>
     );

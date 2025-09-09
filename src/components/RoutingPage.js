@@ -59,7 +59,8 @@ export default function RoutingPage({change}) {
                 <BookingPage 
                     availableTimes={availableTimes}
                     updateTimes={updateTimes}
-                    todayDate={date}
+                    todayDate={getFullDate(today)}
+                    selectedDate={date}
                     updateDate={updateDate}
                     submitForm={submitForm}
                     confirmData={updateConfirmData}
@@ -77,6 +78,7 @@ export default function RoutingPage({change}) {
                 <ConfirmedBooking 
                     info={confirmData}
                     change={change}
+                    updateTimes={updateTimes}
                 />} 
             />
         </Routes>
